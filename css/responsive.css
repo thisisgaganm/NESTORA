@@ -1,0 +1,2155 @@
+
+/* =========================================
+   NESTORA — RESPONSIVE FOUNDATION
+   Phase 02
+========================================= */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+  :root {
+    --container-padding: 32px;
+    --section-space: 100px;
+  }
+
+  .site-container {
+    width: calc(100% - 64px);
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  :root {
+    --container-padding: 22px;
+    --section-space: 80px;
+    --header-height: 72px;
+  }
+
+  .site-container {
+    width: calc(100% - 44px);
+  }
+
+  .section-heading {
+    margin-bottom: 18px;
+  }
+
+  .section-description {
+    font-size: var(--text-sm);
+  }
+
+  .btn {
+    min-height: 48px;
+    padding: 12px 22px;
+  }
+
+}
+
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+
+  :root {
+    --container-padding: 18px;
+    --section-space: 64px;
+  }
+
+  .site-container {
+    width: calc(100% - 36px);
+  }
+
+  .section-kicker {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+
+}
+
+
+/* Reduced motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
+
+/* =========================================
+   NESTORA — RESPONSIVE NAVIGATION
+   Phase 04
+========================================= */
+
+/* Tablet and smaller desktop */
+
+@media (max-width: 1100px) {
+
+  .nav-shell {
+    gap: 18px;
+  }
+
+  .nav-list {
+    gap: 16px;
+  }
+
+  .nav-link {
+    font-size: 11px;
+  }
+
+  .brand-name {
+    font-size: 21px;
+  }
+
+  .nav-cta {
+    padding-inline: 13px;
+  }
+
+}
+
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 900px) {
+
+  .site-header {
+    height: var(--header-height);
+  }
+
+  .nav-shell {
+    position: relative;
+    width: calc(100% - 40px);
+    gap: 12px;
+  }
+
+  .brand-symbol {
+    width: 39px;
+    height: 39px;
+    font-size: 24px;
+  }
+
+  .brand-name {
+    font-size: 21px;
+  }
+
+  /* Hide desktop CTA */
+
+  .nav-cta {
+    display: none;
+  }
+
+  /* Show hamburger */
+
+  .menu-toggle {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  /* Mobile dropdown navigation */
+
+  .primary-navigation {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
+
+    max-height: calc(100vh - var(--header-height));
+    max-height: calc(100svh - var(--header-height));
+    overflow-y: auto;
+
+    padding: 20px;
+
+    background: var(--color-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.2);
+  }
+
+  .primary-navigation.is-open {
+    display: block;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 15px 4px;
+
+    font-size: 13px;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-link:hover {
+    padding-left: 10px;
+    color: var(--color-gold);
+  }
+
+  /* Mobile quote button */
+
+  .mobile-nav-cta {
+    display: block;
+    padding-top: 20px;
+  }
+
+  .mobile-nav-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+  .nav-shell {
+    width: calc(100% - 32px);
+  }
+
+  .brand-name {
+    font-size: 19px;
+  }
+
+  .brand-tagline {
+    font-size: 7px;
+  }
+
+  .brand-symbol {
+    width: 36px;
+    height: 36px;
+    font-size: 22px;
+  }
+
+  .primary-navigation {
+    left: -16px;
+    right: -16px;
+    padding: 18px 20px;
+  }
+
+}
+
+/* =========================================
+   NESTORA — RESPONSIVE HERO
+   Phase 05
+========================================= */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+  .hero-title {
+    font-size: clamp(4rem, 9vw, 6.5rem);
+  }
+
+  .hero-content {
+    width: min(100%, 650px);
+  }
+
+  .hero-side-note {
+    right: 0;
+    bottom: 65px;
+  }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .hero-section {
+    min-height: 100svh;
+    padding-top: var(--header-height);
+    padding-bottom: 55px;
+  }
+
+  .hero-container {
+    min-height: calc(100svh - var(--header-height));
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 65px;
+  }
+
+  .hero-background-image {
+    object-position: 62% center;
+  }
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(15, 15, 15, 0.88) 0%,
+        rgba(15, 15, 15, 0.70) 65%,
+        rgba(15, 15, 15, 0.40) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(15, 15, 15, 0.45),
+        transparent 65%
+      );
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    margin-bottom: 23px;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 12vw, 5.5rem);
+    line-height: 0.98;
+  }
+
+  .hero-description {
+    max-width: 440px;
+    margin-top: 23px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    width: min(100%, 330px);
+    margin-top: 30px;
+    gap: 12px;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-trust {
+    margin-top: 30px;
+    font-size: 10px;
+  }
+
+  .hero-side-note {
+    display: none;
+  }
+
+  .hero-scroll-indicator {
+    bottom: 13px;
+  }
+
+}
+
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+
+  .hero-container {
+    width: calc(100% - 36px);
+  }
+
+  .hero-title {
+    font-size: clamp(3.2rem, 13vw, 4.5rem);
+  }
+
+  .hero-eyebrow {
+    font-size: 8px;
+    gap: 9px;
+  }
+
+  .hero-eyebrow-line {
+    width: 24px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    min-height: 50px;
+  }
+
+}
+
+
+/* Short screens */
+
+@media (max-height: 650px) and (min-width: 769px) {
+
+  .hero-container {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.5rem, 7vw, 6rem);
+  }
+
+  .hero-description {
+    margin-top: 18px;
+  }
+
+  .hero-actions {
+    margin-top: 22px;
+  }
+
+  .hero-trust {
+    margin-top: 25px;
+  }
+
+}
+
+/* =========================================
+   NESTORA — RESPONSIVE ABOUT SECTION
+   Phase 06
+========================================= */
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+
+  .about-container {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+  }
+
+  .about-image-frame {
+    height: 520px;
+  }
+
+  .about-title {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+  }
+
+  .about-description {
+    margin-bottom: 25px;
+  }
+
+}
+
+
+/* Mobile and smaller tablets */
+
+@media (max-width: 768px) {
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .about-visual {
+    max-width: 580px;
+    padding-right: 15px;
+    margin-inline: auto;
+  }
+
+  .about-image-frame {
+    height: clamp(380px, 105vw, 560px);
+  }
+
+  .about-image-caption {
+    left: 15px;
+    min-height: 90px;
+    padding: 16px 20px;
+  }
+
+  .about-caption-number {
+    font-size: 30px;
+  }
+
+  .about-caption-content strong {
+    font-size: 19px;
+  }
+
+  .about-content {
+    max-width: 650px;
+  }
+
+  .about-title {
+    font-size: clamp(3rem, 9vw, 4.5rem);
+  }
+
+}
+
+
+/* Small mobile */
+
+@media (max-width: 480px) {
+
+  .about-container {
+    gap: 45px;
+  }
+
+  .about-visual {
+    padding-right: 10px;
+    padding-bottom: 24px;
+  }
+
+  .about-image-frame {
+    height: 390px;
+  }
+
+  .about-image-corner {
+    width: 55px;
+    height: 55px;
+  }
+
+  .about-image-caption {
+    left: 10px;
+    min-height: 78px;
+    gap: 14px;
+    padding: 13px 16px;
+  }
+
+  .about-caption-number {
+    font-size: 27px;
+  }
+
+  .about-caption-content span {
+    font-size: 8px;
+  }
+
+  .about-caption-content strong {
+    font-size: 17px;
+  }
+
+  .about-title {
+    font-size: clamp(2.7rem, 11vw, 3.5rem);
+  }
+
+  .about-intro {
+    font-size: 15px;
+  }
+
+  .about-description {
+    font-size: 13px;
+  }
+
+  .about-principle {
+    gap: 14px;
+    padding: 17px 0;
+  }
+
+  .principle-content h3 {
+    font-size: 13px;
+  }
+
+  .principle-content p {
+    font-size: 11px;
+  }
+
+}
+/* =========================================
+   PHASE 7 — SERVICES RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .services-heading-row {
+    gap: 35px;
+    margin-bottom: 48px;
+  }
+
+  .services-grid {
+    gap: 20px;
+  }
+
+  .service-card-featured {
+    margin-top: 25px;
+  }
+
+  .service-card-content > p {
+    min-height: 125px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-heading-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 38px;
+  }
+
+  .services-heading-aside {
+    justify-self: start;
+    max-width: 540px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 42px 22px;
+  }
+
+  .service-card-featured {
+    margin-top: 0;
+  }
+
+  .service-card:last-child {
+    grid-column: 1 / -1;
+    width: calc(50% - 11px);
+  }
+
+  .service-card-content > p {
+    min-height: auto;
+  }
+
+  .services-bottom {
+    flex-wrap: wrap;
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 520px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .service-card:last-child {
+    grid-column: auto;
+    width: 100%;
+  }
+
+  .service-image-wrap {
+    aspect-ratio: 1 / 0.92;
+  }
+
+  .service-card h3 {
+    font-size: 31px;
+  }
+
+  .service-card-content > p {
+    font-size: 12px;
+  }
+
+  .services-bottom {
+    gap: 13px;
+    margin-top: 45px;
+  }
+
+  .services-bottom p {
+    font-size: 17px;
+  }
+
+  .services-contact-link {
+    width: 100%;
+    margin: 8px 0 0 55px;
+  }
+}
+/* =========================================
+   PHASE 8 — JOURNEY RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .journey-heading {
+    gap: 40px;
+  }
+
+  .journey-highlights {
+    gap: 22px;
+  }
+
+  .construction-timeline {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .timeline-stage:nth-child(4n) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .timeline-stage:nth-child(3n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .journey-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .journey-heading-aside {
+    justify-self: start;
+  }
+
+  .journey-visual {
+    min-height: 390px;
+  }
+
+  .journey-highlights {
+    grid-template-columns: 1fr;
+    gap: 27px;
+    padding: 40px 0 75px;
+  }
+
+  .journey-highlight {
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  .house-3d-stage,
+  .house-stage-placeholder {
+    min-height: 420px;
+  }
+
+  .house-stage-overlay {
+    right: 22px;
+    bottom: 20px;
+    left: 22px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .house-stage-readout {
+    max-width: none;
+  }
+
+  .house-camera-controls {
+    justify-content: flex-start;
+  }
+
+  .house-stage-topline {
+    top: 20px;
+    right: 22px;
+    left: 22px;
+  }
+
+  .timeline-intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .construction-timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline-stage:nth-child(3n) {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .timeline-stage:nth-child(2n) {
+    border-right: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .journey-visual {
+    min-height: 330px;
+  }
+
+  .journey-visual-content {
+    padding: 25px;
+  }
+
+  .journey-visual-caption {
+    right: 20px;
+    bottom: 18px;
+    left: 20px;
+    font-size: 8px;
+  }
+
+  .journey-highlight h3 {
+    font-size: 21px;
+  }
+
+  .construction-experience-heading p {
+    font-size: 12px;
+  }
+
+  .house-3d-stage,
+  .house-stage-placeholder {
+    min-height: 350px;
+  }
+
+  .house-stage-placeholder {
+    padding: 25px 15px;
+  }
+
+  .house-stage-overlay {
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    gap: 9px;
+  }
+
+  .house-stage-readout {
+    padding: 12px 14px;
+  }
+
+  .house-stage-readout h3 {
+    font-size: 25px;
+  }
+
+  .house-stage-readout p {
+    font-size: 10px;
+  }
+
+  .house-camera-controls {
+    gap: 6px;
+  }
+
+  .house-camera-controls button {
+    min-height: 36px;
+    padding: 0 10px;
+    font-size: 9px;
+  }
+
+  .house-stage-topline {
+    top: 15px;
+    right: 15px;
+    left: 15px;
+    font-size: 7px;
+  }
+
+  .house-stage-overline,
+  .house-stage-placeholder-footer {
+    font-size: 7px;
+  }
+
+  .construction-timeline-wrapper {
+    padding-top: 45px;
+    padding-bottom: 75px;
+  }
+
+  .construction-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-stage,
+  .timeline-stage:nth-child(2n),
+  .timeline-stage:nth-child(3n),
+  .timeline-stage:nth-child(4n) {
+    min-height: 80px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    border-right: none;
+  }
+
+  .timeline-stage-name {
+    font-size: 18px;
+  }
+}
+
+/* PHASE 10 — PINNED CONSTRUCTION EXPERIENCE */
+
+@media (max-width: 1024px) {
+  .construction-scroll-track {
+    grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.85fr);
+    gap: 22px;
+  }
+
+  .construction-model-column .house-3d-stage {
+    height: min(64svh, 580px);
+    min-height: 440px;
+  }
+
+  .construction-scroll-track .timeline-stage,
+  .construction-scroll-track .timeline-stage:nth-child(2n),
+  .construction-scroll-track .timeline-stage:nth-child(3n),
+  .construction-scroll-track .timeline-stage:nth-child(4n) {
+    min-height: 68px;
+  }
+}
+
+@media (max-width: 768px) {
+  .construction-scroll-track {
+    width: calc(100% - 32px);
+    height: calc(100vh + 1000px);
+    height: calc(100svh + 1000px);
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .construction-model-column {
+    top: calc(var(--header-height, 72px) + 10px);
+  }
+
+  .construction-model-column .house-3d-stage {
+    height: min(46svh, 420px);
+    min-height: 300px;
+  }
+
+  .construction-scroll-track > .construction-timeline-wrapper {
+    top: calc(var(--header-height, 72px) + 10px);
+    max-height: calc(100svh - var(--header-height, 72px) - 24px);
+    padding: 14px 10px;
+  }
+
+  .construction-scroll-track .timeline-intro {
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+  }
+
+  .construction-scroll-track .timeline-intro h3 {
+    font-size: 26px;
+  }
+
+  .construction-scroll-track .timeline-intro > p {
+    margin-top: 7px;
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .construction-scroll-track .timeline-stage,
+  .construction-scroll-track .timeline-stage:nth-child(2n),
+  .construction-scroll-track .timeline-stage:nth-child(3n),
+  .construction-scroll-track .timeline-stage:nth-child(4n) {
+    min-height: 59px;
+    gap: 6px;
+    padding: 8px 4px;
+  }
+
+  .construction-scroll-track .timeline-stage-button {
+    gap: 7px;
+  }
+
+  .construction-scroll-track .timeline-stage-number {
+    font-size: 8px;
+  }
+
+  .construction-scroll-track .timeline-stage-name {
+    font-size: 14px;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 480px) {
+  .construction-scroll-track {
+    width: calc(100% - 20px);
+    grid-template-columns: minmax(0, 1.04fr) minmax(0, 0.96fr);
+    gap: 8px;
+  }
+
+  .construction-model-column .house-3d-stage {
+    height: min(44svh, 380px);
+    min-height: 280px;
+  }
+
+  .construction-scroll-track > .construction-timeline-wrapper {
+    padding: 11px 8px;
+  }
+
+  .construction-scroll-track .timeline-intro h3 {
+    font-size: 23px;
+  }
+
+  .construction-scroll-track .timeline-intro .section-kicker {
+    font-size: 8px;
+  }
+
+  .construction-scroll-track .timeline-intro > p {
+    font-size: 9px;
+  }
+
+  .construction-scroll-track .timeline-stage,
+  .construction-scroll-track .timeline-stage:nth-child(2n),
+  .construction-scroll-track .timeline-stage:nth-child(3n),
+  .construction-scroll-track .timeline-stage:nth-child(4n) {
+    min-height: 56px;
+  }
+
+  .construction-scroll-track .timeline-stage-name {
+    font-size: 13px;
+  }
+
+  .construction-model-column .house-stage-overlay {
+    right: 7px;
+    bottom: 8px;
+    left: 7px;
+    gap: 5px;
+  }
+
+  .construction-model-column .house-stage-topline {
+    right: 8px;
+    left: 8px;
+    gap: 5px;
+    font-size: 6px;
+    letter-spacing: 0.08em;
+  }
+
+  .construction-model-column .house-stage-topline span:first-child {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .construction-model-column .house-stage-topline span:last-child {
+    flex: 0 0 auto;
+  }
+
+  .construction-model-column .house-stage-readout {
+    padding: 8px;
+  }
+
+  .construction-model-column .house-stage-readout .house-stage-placeholder-number {
+    margin-bottom: 5px;
+    font-size: 9px;
+  }
+
+  .construction-model-column .house-stage-readout h3 {
+    font-size: 19px;
+  }
+
+  .construction-model-column .house-stage-readout p {
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .construction-model-column .house-stage-progress-track {
+    margin-top: 8px;
+  }
+
+  .construction-model-column .house-camera-controls {
+    justify-content: center;
+    gap: 4px;
+  }
+
+  .construction-model-column .house-camera-controls button {
+    min-height: 30px;
+    padding: 0 6px;
+    font-size: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-reduced .construction-scroll-track {
+    height: auto;
+  }
+
+  .motion-reduced .construction-scroll-track > .construction-timeline-wrapper {
+    max-height: none;
+  }
+}
+/* =========================================
+   PHASE 11 — EXTERIOR RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .exterior-heading {
+    gap: 35px;
+  }
+
+  .exterior-feature {
+    margin-bottom: 55px;
+  }
+
+  .exterior-details-grid {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .exterior-container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .exterior-heading {
+    grid-template-columns: 1fr;
+    gap: 23px;
+    margin-bottom: 40px;
+  }
+
+  .exterior-heading-aside {
+    justify-self: start;
+  }
+
+  .exterior-feature-image {
+    aspect-ratio: 1 / 0.85;
+  }
+
+  .exterior-feature-note {
+    margin-top: 23px;
+  }
+
+  .exterior-details-grid {
+    gap: 35px 20px;
+    margin-top: 60px;
+  }
+
+  .exterior-bottom {
+    flex-wrap: wrap;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 520px) {
+  .exterior-details-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .exterior-feature-image {
+    aspect-ratio: 1 / 1;
+  }
+
+  .exterior-feature-caption {
+    right: 16px;
+    bottom: 18px;
+    left: 16px;
+    font-size: 7px;
+  }
+
+  .exterior-feature-note {
+    gap: 17px;
+  }
+
+  .exterior-feature-note h3 {
+    font-size: 24px;
+  }
+
+  .exterior-detail-image {
+    aspect-ratio: 1 / 0.88;
+  }
+
+  .exterior-bottom {
+    gap: 15px;
+  }
+
+  .exterior-bottom > p {
+    flex: 1;
+    font-size: 18px;
+  }
+
+  .exterior-bottom-link {
+    margin: 10px 0 0 60px;
+  }
+}
+
+/* =========================================
+   PHASE 12 — INTERIORS RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .interiors-heading {
+    gap: 40px;
+  }
+
+  .interiors-gallery {
+    gap: 20px;
+  }
+
+  .interior-card-image {
+    height: 300px;
+  }
+
+  .interiors-bottom {
+    margin-top: 75px;
+  }
+}
+
+@media (max-width: 768px) {
+  .interiors-heading {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .interiors-heading-side {
+    max-width: 560px;
+  }
+
+  .interiors-feature {
+    margin-bottom: 60px;
+  }
+
+  .interiors-feature-image {
+    height: 480px;
+  }
+
+  .interiors-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 18px;
+  }
+
+  .interior-card-image {
+    height: 290px;
+  }
+
+  .interiors-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 65px;
+  }
+}
+
+@media (max-width: 520px) {
+  .interiors-feature-image {
+    height: 390px;
+  }
+
+  .interiors-feature-caption {
+    left: 22px;
+    right: 18px;
+    bottom: 25px;
+  }
+
+  .interiors-feature-caption h3 {
+    font-size: 42px;
+  }
+
+  .interiors-feature-note {
+    gap: 12px;
+  }
+
+  .interiors-gallery {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .interior-card-image {
+    height: 340px;
+  }
+
+  .interior-card-info {
+    padding-top: 17px;
+  }
+
+  .interiors-bottom {
+    gap: 22px;
+    margin-top: 55px;
+  }
+
+  .interiors-bottom .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .interiors-feature-image {
+    height: 340px;
+  }
+
+  .interior-card-image {
+    height: 290px;
+  }
+}
+
+/* =========================================
+   PHASE 13 — MATERIALS RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .materials-heading {
+    gap: 35px;
+  }
+
+  .materials-feature {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .materials-feature-side {
+    padding: 28px;
+  }
+
+  .materials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 22px;
+  }
+
+  .material-card-image {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .materials-heading {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .materials-feature {
+    grid-template-columns: 1fr;
+    margin-bottom: 75px;
+  }
+
+  .materials-feature-image,
+  .materials-feature-image img {
+    min-height: 390px;
+  }
+
+  .materials-feature-side {
+    padding: 30px;
+  }
+
+  .materials-side-number {
+    margin-bottom: 20px;
+    font-size: 46px;
+  }
+
+  .materials-collection-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .materials-collection-heading > p {
+    max-width: 500px;
+  }
+
+  .materials-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 520px) {
+  .materials-feature-image,
+  .materials-feature-image img {
+    min-height: 330px;
+  }
+
+  .materials-feature-caption {
+    left: 22px;
+    right: 18px;
+    bottom: 25px;
+  }
+
+  .materials-feature-caption h3 {
+    font-size: 42px;
+  }
+
+  .materials-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .material-card-image {
+    height: 310px;
+  }
+
+  .materials-feature-side {
+    padding: 25px 22px;
+  }
+
+  .materials-bottom {
+    gap: 25px;
+    margin-top: 60px;
+  }
+
+  .materials-bottom .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .materials-feature-image,
+  .materials-feature-image img {
+    min-height: 290px;
+  }
+
+  .material-card-image {
+    height: 270px;
+  }
+}
+
+/* =========================================
+   PHASE 14 — PROJECTS RESPONSIVE
+========================================= */
+
+@media (max-width: 1024px) {
+  .projects-heading {
+    gap: 35px;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px 20px;
+  }
+
+  .project-image {
+    height: 320px;
+  }
+
+  .project-view {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-heading {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .projects-filters {
+    gap: 8px;
+  }
+
+  .project-filter {
+    padding: 10px 15px;
+    font-size: 10px;
+  }
+
+  .project-image {
+    height: 280px;
+  }
+
+  .projects-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .project-modal-content {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+  }
+
+  .project-modal-image,
+  .project-modal-image img {
+    min-height: 250px;
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 520px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .project-image {
+    height: 330px;
+  }
+
+  .project-info h3 {
+    font-size: 27px;
+  }
+
+  .projects-filters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-filter {
+    width: 100%;
+  }
+
+  .projects-bottom {
+    gap: 22px;
+  }
+
+  .projects-bottom .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-modal {
+    padding: 12px;
+  }
+
+  .project-modal-content {
+    max-height: 92vh;
+  }
+
+  .project-modal-image,
+  .project-modal-image img {
+    min-height: 210px;
+    max-height: 240px;
+  }
+
+  .project-modal-text {
+    padding: 25px 22px;
+  }
+
+  .project-modal-text .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .project-image {
+    height: 280px;
+  }
+}
+
+/* =========================================
+   ESTIMATOR RESPONSIVE STYLES
+========================================= */
+
+@media (max-width: 900px) {
+  .estimator-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .estimator-result-panel {
+    min-height: auto;
+  }
+
+  .estimator-result-icon {
+    margin-top: 25px;
+  }
+
+  .estimator-disclaimer {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .estimator-heading {
+    margin-bottom: 35px;
+  }
+
+  .estimator-form-panel,
+  .estimator-result-panel {
+    padding: 24px 19px;
+  }
+
+  .estimator-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .estimator-choice-card {
+    min-height: 105px;
+  }
+
+  .estimator-navigation {
+    gap: 10px;
+  }
+
+  .estimator-navigation .btn {
+    min-width: 0;
+    flex: 1;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .estimator-area-preview {
+    flex-direction: column;
+  }
+
+  .estimator-area-preview strong {
+    text-align: left;
+  }
+
+  .estimator-total {
+    font-size: 30px;
+  }
+}
+
+/* =========================================
+   TESTIMONIALS RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonial-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+    margin-bottom: 35px;
+  }
+
+  .testimonials-header .section-description {
+    max-width: 520px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card:last-child {
+    grid-column: auto;
+  }
+
+  .testimonial-card {
+    min-height: 330px;
+  }
+
+  .testimonials-bottom {
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .testimonial-card {
+    min-height: 310px;
+    padding: 24px;
+  }
+
+  .testimonial-card blockquote {
+    font-size: 21px;
+  }
+
+  .testimonials-bottom p {
+    font-size: 17px;
+  }
+}
+
+/* =========================================
+   CONTACT RESPONSIVE STYLES
+========================================= */
+
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .contact-information {
+    padding-top: 0;
+  }
+
+  .contact-details {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-side-note {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-heading {
+    margin-bottom: 38px;
+  }
+
+  .contact-form-panel {
+    padding: 25px 19px;
+  }
+
+  .contact-form-row {
+    grid-template-columns: 1fr;
+    gap: 21px;
+  }
+
+  .contact-details {
+    grid-template-columns: 1fr;
+    gap: 23px;
+  }
+
+  .contact-information h3 {
+    font-size: 39px;
+  }
+
+  .contact-side-note {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 380px) {
+  .contact-form-panel {
+    padding: 20px 15px;
+  }
+
+  .contact-field input,
+  .contact-field select,
+  .contact-field textarea {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   FOOTER RESPONSIVE STYLES
+========================================= */
+
+@media (max-width: 1000px) {
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 22px;
+    padding-top: 65px;
+    padding-bottom: 55px;
+  }
+
+  .footer-brand-column {
+    grid-column: 1 / -1;
+  }
+
+  .footer-brand-description {
+    max-width: 320px;
+  }
+
+  .footer-link-column h3,
+  .footer-contact-column h3 {
+    margin-bottom: 20px;
+  }
+
+  .footer-link-column ul {
+    gap: 13px;
+  }
+
+  .footer-link-column a {
+    font-size: 11px;
+  }
+
+  .footer-contact-column {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom-inner {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  .footer-bottom-tagline {
+    order: -1;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-brand-column,
+  .footer-contact-column {
+    grid-column: auto;
+  }
+}
+
+/* =========================================
+   NESTORA — PHASE 19
+   RESPONSIVE & PERFORMANCE OVERRIDES
+   ========================================= */
+
+/* 1. Global responsive safety */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  overflow-x: clip;
+  scroll-padding-top: 90px;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  overflow-x: clip;
+}
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  max-width: 100%;
+  font: inherit;
+}
+
+.site-container {
+  width: min(100% - 64px, 1440px);
+  margin-inline: auto;
+}
+
+.site-section {
+  min-width: 0;
+  scroll-margin-top: 88px;
+}
+
+.section-heading,
+.section-description {
+  overflow-wrap: anywhere;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+/* 2. Prevent media from breaking layouts */
+.hero-background-image,
+.about-image,
+.service-card img,
+.exterior-section img,
+.interiors-section img,
+.materials-section img,
+.projects-section img,
+.project-modal img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* 3. Tablet layout */
+@media (max-width: 1024px) {
+  .site-container {
+    width: min(100% - 48px, 900px);
+  }
+
+  .section-padding {
+    padding-block: 90px;
+  }
+
+  .section-heading {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .about-container,
+  .exterior-container,
+  .interior-container,
+  .contact-container {
+    gap: 40px;
+  }
+
+  .services-grid,
+  .projects-grid,
+  .materials-grid,
+  .interior-gallery,
+  .exterior-gallery {
+    gap: 20px;
+  }
+
+  .hero-container {
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
+  .house-3d-stage {
+    min-height: 420px;
+  }
+}
+
+/* 4. Mobile layout */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  .site-container {
+    width: calc(100% - 40px);
+  }
+
+  .site-section {
+    scroll-margin-top: 76px;
+  }
+
+  .section-padding {
+    padding-block: 76px;
+  }
+
+  .section-heading {
+    font-size: clamp(2.25rem, 9vw, 3.4rem);
+    line-height: 1.05;
+  }
+
+  .section-description {
+    font-size: 0.95rem;
+    line-height: 1.75;
+  }
+
+  /* Hero */
+  .hero-section {
+    min-height: 760px;
+    min-height: 100svh;
+  }
+
+  .hero-container {
+    min-height: inherit;
+    padding-top: 120px;
+    padding-bottom: 100px;
+  }
+
+  .hero-title {
+    font-size: clamp(3.2rem, 12vw, 5.2rem);
+    line-height: 0.98;
+  }
+
+  .hero-description {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero-side-note {
+    display: none;
+  }
+
+  /* About and showcase sections */
+  .about-container,
+  .exterior-container,
+  .interior-container,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-image-frame {
+    width: 100%;
+    max-width: 600px;
+    margin-inline: auto;
+  }
+
+  .services-grid,
+  .projects-grid,
+  .materials-grid,
+  .interior-gallery,
+  .exterior-gallery,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Construction experience */
+  .construction-experience {
+    grid-template-columns: 1fr;
+  }
+
+  .house-3d-stage {
+    width: 100%;
+    min-height: 340px;
+    max-height: 65vh;
+  }
+
+  .house-3d-stage canvas {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .construction-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  /* Portfolio */
+  .project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .project-card {
+    min-width: 0;
+  }
+
+  /* Estimator and contact forms */
+  .estimator-layout,
+  .estimator-form,
+  .contact-form,
+  .contact-info {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .estimator-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .estimator-result {
+    position: static;
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .estimator-form input,
+  .estimator-form select {
+    width: 100%;
+    min-width: 0;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 24px;
+  }
+}
+
+/* 5. Small phones */
+@media (max-width: 480px) {
+  .site-container {
+    width: calc(100% - 32px);
+  }
+
+  .section-padding {
+    padding-block: 64px;
+  }
+
+  .section-heading {
+    font-size: clamp(2.1rem, 10vw, 2.8rem);
+  }
+
+  .hero-section {
+    min-height: 720px;
+  }
+
+  .hero-container {
+    padding-top: 110px;
+    padding-bottom: 90px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.9rem, 13vw, 4rem);
+  }
+
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .services-grid,
+  .projects-grid,
+  .materials-grid,
+  .interior-gallery,
+  .exterior-gallery,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-filters {
+    gap: 8px;
+  }
+
+  .project-filter {
+    font-size: 0.8rem;
+    padding: 9px 13px;
+  }
+
+  .house-3d-stage {
+    min-height: 280px;
+  }
+
+  .project-modal-content {
+    width: calc(100% - 24px);
+    max-height: 90svh;
+    overflow-y: auto;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    min-height: 46px;
+  }
+}
+
+/* 6. Very small screens */
+@media (max-width: 360px) {
+  .site-container {
+    width: calc(100% - 24px);
+  }
+
+  .hero-title {
+    font-size: 2.65rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .nav-shell {
+    padding-inline: 12px;
+  }
+}
+
+/* 7. Touch devices */
+@media (hover: none) {
+  .hover-lift:hover {
+    transform: none;
+  }
+
+  .image-zoom:hover img {
+    transform: none;
+  }
+}
+
+/* 8. Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
